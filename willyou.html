@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+    <h1 id=title>Do you want to go on a date with me?</h1>
+    <button onclick="alert('YAY! :)')">Yes</button>
+    <button id="a" onmouseover="move();" style="position:fixed;">No</button>
+    <script>
+        count = 0;
+
+        function move() {
+            document.getElementById("a").style.right = String(Math.random() * 100) + "%";
+            document.getElementById("a").style.top = String(Math.random() * 100) + "%";
+            document.getElementById("title").style.color = "rgb(" + String(Math.random() * 255) + "," + String(Math.random() * 255) + "," + String(Math.random() * 255) + ")";
+            count = count + 1;
+            if (count > 5) {
+                alert("OK :(")
+            }
+        }
+    </script>
+</body>
+
+</html>
